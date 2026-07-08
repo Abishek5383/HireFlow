@@ -1,0 +1,11 @@
+Extract all relevant professional skills (both technical and soft skills) as a flat JSON list of strings from the following text.
+
+Text:
+---
+{text}
+---
+
+Your response MUST be a valid JSON array of strings ONLY.
+Example: ["Python", "FastAPI", "MongoDB", "Agile Methodologies", "Communication"]
+
+Do not wrap the response in markdown blocks or include any other text.

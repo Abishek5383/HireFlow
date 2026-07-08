@@ -1,0 +1,36 @@
+# Root .gitignore for Smart HR Recruitment Agent (HireFlow)
+
+# Backend
+backend/venv/
+backend/.env
+backend/app/uploads/
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# General/IDE/OS
+.vscode/
+.idea/
+.gemini/
+.DS_Store
+Thumbs.db
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*

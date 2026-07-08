@@ -1,0 +1,56 @@
+You are an expert interviewer.
+Generate exactly 3 to 4 distinct interview questions for EACH of the categories listed below, tailored to the candidate's profile and the job description. 
+For every question, provide a detailed ideal answer/explanation for the HR recruiter's reference.
+
+The questions must be divided into four categories:
+1. Technical (testing candidate's tech skills)
+2. Project-Based (based on the candidate's listed projects/work history)
+3. Scenario (hypothetical scenarios they might face in this role)
+4. Behavioral (assessing soft skills and cultural fit)
+
+Candidate Profile:
+---
+Name: {candidate_name}
+Skills: {candidate_skills}
+Experience Years: {candidate_experience_years}
+Experience Details: {candidate_experience_details}
+Projects: {candidate_projects}
+---
+
+Job Requirement:
+---
+Title: {job_title}
+Company: {company_name}
+Required Skills: {required_skills}
+Description: {job_description}
+---
+
+Your response MUST be a valid JSON object ONLY conforming to the schema below. Do not wrap in markdown or add explanations.
+
+Schema:
+{{
+  "technical": [
+    {{
+      "question": "string (the interview question)",
+      "answer": "string (detailed ideal answer/explanation for the HR's reference)"
+    }}
+  ],
+  "project_based": [
+    {{
+      "question": "string (the interview question)",
+      "answer": "string (detailed ideal answer/explanation for the HR's reference)"
+    }}
+  ],
+  "scenario": [
+    {{
+      "question": "string (the interview question)",
+      "answer": "string (detailed ideal answer/explanation for the HR's reference)"
+    }}
+  ],
+  "behavioral": [
+    {{
+      "question": "string (the interview question)",
+      "answer": "string (detailed ideal answer/explanation/what traits to look for in their response)"
+    }}
+  ]
+}}

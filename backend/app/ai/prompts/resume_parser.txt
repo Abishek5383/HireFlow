@@ -1,0 +1,34 @@
+You are an expert HR assistant and data parser.
+Parse the following raw text extracted from a resume and output a valid JSON document conforming strictly to the requested schema.
+
+Raw Resume Text:
+---
+{resume_text}
+---
+
+Your response MUST be a valid JSON object ONLY. Do not wrap the JSON in markdown code blocks (e.g. do not use ```json) and do not add any additional explanation.
+
+JSON Schema:
+{{
+  "name": "string (Candidate Full Name. If not found, use Unknown)",
+  "email": "string (Candidate email. If not found, use empty string)",
+  "phone": "string (Candidate phone. If not found, use empty string)",
+  "skills": ["array of strings (extracted technical and soft skills, e.g. Python, React, Communication)"],
+  "experience_years": "float/number (Total number of years of professional experience. Deduce from job durations. Default to 0.0)",
+  "education": "string (Highest level of education, e.g., Bachelor of Science in Computer Science, or Unknown)",
+  "experience_details": [
+    {{
+      "company": "string (Company name)",
+      "role": "string (Job title)",
+      "duration": "string (e.g. Jan 2020 - Dec 2022)",
+      "description": "string (short description of responsibilities/achievements)"
+    }}
+  ],
+  "projects": [
+    {{
+      "name": "string (Project name)",
+      "description": "string (Project description)"
+    }}
+  ],
+  "certifications": ["array of strings (certified courses, licenses, or credentials)"]
+}}

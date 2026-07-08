@@ -1,0 +1,13 @@
+You are a JSON compliance agent.
+The following input text was generated but might contain JSON syntax errors, trailing commas, markdown formatting block backticks, or other syntax invalidities.
+Reformat and correct the input so that it is a 100% syntactically valid JSON object adhering strictly to the schema provided. Do not alter the actual content fields, only repair the format.
+
+Target JSON Schema:
+{schema}
+
+Input Text to Repair:
+---
+{input_text}
+---
+
+Your response MUST be a valid JSON object ONLY. Do not include markdown ticks (e.g. ```json) or any conversational text.

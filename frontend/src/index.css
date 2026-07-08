@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-background: #808080;
+  --color-accent: #FD7B41;
+  --color-accent-soft: #EDBF9B;
+  --color-ink: #111111;
+  --color-surface: rgba(180, 180, 180, 0.7);
+  --color-text-secondary: rgba(17, 17, 17, 0.8);
+}
+
+@layer base {
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-ink);
+    @apply antialiased;
+  }
+}
+
+/* Premium micro-animations & customizations */
+.glassmorphism {
+  background: var(--color-surface) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(60, 64, 68, 0.15) !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.08) !important;
+  border-radius: 1rem;
+}
+
+/* Global text color overrides for the light theme */
+main h1, main h2, main h3, main h4, main h5, main h6,
+.glassmorphism h1, .glassmorphism h2, .glassmorphism h3, .glassmorphism h4, .glassmorphism h5, .glassmorphism h6 {
+  color: var(--color-ink) !important;
+}
+
+main p, main span.text-slate-400,
+.glassmorphism p, .glassmorphism .text-slate-300, .glassmorphism .text-slate-400, .glassmorphism .text-slate-500, .glassmorphism .text-slate-200 {
+  color: var(--color-text-secondary) !important;
+}
+
+main label, main th, .glassmorphism label, .glassmorphism th {
+  color: var(--color-ink) !important;
+}
+
+/* Inputs on page background and cards should be light, neat and readable */
+main input, main select, main textarea,
+.glassmorphism input, .glassmorphism select, .glassmorphism textarea {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  color: var(--color-ink) !important;
+  border-color: rgba(17, 17, 17, 0.25) !important;
+}
+
+main input:focus, main select:focus, main textarea:focus,
+.glassmorphism input:focus, .glassmorphism select:focus, .glassmorphism textarea:focus {
+  border-color: var(--color-accent) !important;
+  outline: none !important;
+}
+
+.text-white {
+  color: #FFFFFF !important;
+}
+
+.text-accent {
+  color: var(--color-accent) !important;
+}
+
+/* Gradient text customization to align with new Calcite style */
+.gradient-text {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, var(--color-accent), var(--color-accent-soft), var(--color-accent));
+}
+
+/* Custom scrollbars for light mode */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent-soft);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
